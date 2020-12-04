@@ -17,11 +17,11 @@ var client = http.DefaultClient
 var (
 	port = flag.Int("port", 0, "override default port (80 for http, 443 for https)")
 
-	certPath = flag.String("tls-cert", "", "specify path to TLS .crt/.pem public certificate")
-	keyPath  = flag.String("tls-key", "", "specify path to the TLS private key")
-	useTLS   = flag.Bool("tls", false, "set to true to serve using TLS")
+	certPath = flag.String("tls-cert", "", "specify path to TLS .crt/.pem public certificate (default \"\")")
+	keyPath  = flag.String("tls-key", "", "specify path to the TLS private key (default \"\")")
+	useTLS   = flag.Bool("tls", false, "set to true to serve using TLS (default: false)")
 
-	verbose = flag.Bool("v", false, "verbose flag, log all incoming requests")
+	verbose = flag.Bool("v", false, "verbose flag, log all incoming requests (default: false)")
 )
 
 func main() {
